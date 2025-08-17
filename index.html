@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Letter in a Bottle</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      text-align: center;
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: brightness(0.6);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 6px #000;
+    }
+
+    .bottle {
+      cursor: pointer;
+      width: 140px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      margin: 20px 0;
+    }
+
+    .bottle:hover {
+      transform: scale(1.1) rotate(-2deg);
+    }
+
+    #message {
+      display: none;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 25px;
+      border-radius: 16px;
+      max-width: 600px;
+      line-height: 1.6;
+      animation: fadeIn 0.8s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+      text-shadow: 1px 1px 3px #000;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Found this floating near your shore...</h1>
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Message_in_a_bottle_icon.png" 
+       alt="Bottle" class="bottle" id="bottle" />
+
+  <div id="message">
+    <p>Happy birthday madiha. many many happy returns of the day. may allah bless your life to the max, ameen and hope we both meet in jannah. ameen. anyways, sweet 19 now (thats crazyyy) ur gonna be an unc soon, this birthday is definitley diffrent from all of them, and i hope u enjoy it to the maxxxxx. im happy for you turning 19 and i hope maturity bhi ajaye.you are the best thing happened to me 2022-2025 and the worst pain also after mayyu left, but meh. dukh dard peeda. idk what does that mean but bolne mai accha laga, anyways, cutie. hope you will be satisfied with all the 7 gifts i have shared, and i sincerely pray that we both are in each others eternal happiness. mwah, now this is the 7th gift ig, idk, but i plan to throw gifts at you for as long as i can, youre beautiful, inside and out, i hope to see your face in jannah,  anyways, do you know that f you fell into a black hole, from your perspective you’d just… fall in. But to someone watching you from far away, they’d never actually see you cross the edge. You’d just slow down, get redder and dimmer, and then freeze at the event horizon for eternity. So in a way… there’s a version of you that would be stuck on the edge of a black hole forever, while you are long gone inside. Two versions of you existing at once, depending on who’s looking. crazy right? well, i hope there is some other version of us out there who is together. i cannot ask you or command you to do anything now, since youre not mine, unfortunately, BUT a request that.... idk, but yea just dont forget me or this phase, alr? please? cus i really wanna do all the sttuff we told we will do, but in jannah, so please, bbg. anyways, hope you liked the space fact. i know im not great at expressing emotions and this wish is no where near to your wish (i was about to cry in plane) but i have tried my best for you to like it. so, 3 more days ahahahah, finally is chutiye se chutkara mil jayega. but i really am honoured to have spend this era with you, to be loved by you. jappy birthday again, madiha. enjoy your day. ❤️</p>
+  </div>
+
+  <footer>Made with 💙 just for you</footer>
+
+  <!-- Background music -->
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-summer.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const bottle = document.getElementById('bottle');
+    const message = document.getElementById('message');
+
+    bottle.addEventListener('click', function() {
+      if (message.style.display === 'none' || message.style.display === '') {
+        message.style.display = 'block';
+        bottle.style.opacity = '0.7';
+      } else {
+        message.style.display = 'none';
+        bottle.style.opacity = '1';
+      }
+    });
+  </script>
+</body>
+</html>
